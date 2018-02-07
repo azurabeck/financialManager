@@ -1,5 +1,5 @@
 import axios from 'axios'
-const BASE_URL = 'http://localhost:3003/api/clientCycles'
+const BASE_URL = 'http://localhost:3003/api/clientCycle'
 
 export function getList() {
     const request = axios.get(`${BASE_URL}`) 
