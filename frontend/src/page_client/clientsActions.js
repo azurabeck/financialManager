@@ -8,3 +8,10 @@ export function getList() {
         payload: request
     }
 }
+
+export function create(values) {
+    axios.post(`${BASE_URL}/clientCycle`, values)
+    return {
+        type: 'TEMP'
+    } 
+}

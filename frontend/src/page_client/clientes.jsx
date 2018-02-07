@@ -8,10 +8,11 @@ import TabsHeader from '../common/tab/tabsHeader'
 import TabsContent from '../common/tab/tabsContent'
 import TabHeaderContent from '../common/tab/tabHeaderContent'
 import TabContent from '../common/tab/tabContent'
-import { selectTab } from '../common/tab/tabActions'
-import { showTabs } from '../common/tab/tabActions'
+import { selectTab, showTabs } from '../common/tab/tabActions'
+import { create } from './clientsActions'
 
 import List from './clientList'
+import Form from './clientForm'
 
 class Clients extends Component {
 
@@ -33,7 +34,9 @@ class Clients extends Component {
                             </TabsHeader>
                             <TabsContent>
                                 <TabContent id='tabList'><List /></TabContent>
-                                <TabContent id='tabCreate'><h1>Incluir</h1></TabContent>
+                                <TabContent id='tabCreate'>
+                                    <Form onSubmit={this.props.create}/>
+                                </TabContent>
                                 <TabContent id='tabUpdate'><h1>Alterar</h1></TabContent>
                                 <TabContent id='tabDelete'><h1>Deletar</h1></TabContent>
                             </TabsContent>
@@ -44,5 +47,6 @@ class Clients extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({selectTab, showTabs}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({
+    selectTab, showTabs, create}, dispatch)
 export default connect(null, mapDispatchToProps)(Clients)
