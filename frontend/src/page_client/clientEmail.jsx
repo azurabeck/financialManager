@@ -10,7 +10,9 @@ class EmailList extends Component {
         return (
             <tr>
                 <td><Field name='newemail[0].email' component={Input}
-                    placeholder='Informe o email' readOnly={this.props.readOnly} /></td>
+                    placeholder='Informe o email' readOnly={this.props.readOnly} />
+                </td>
+                
                 <td>
                     <button type='button' className='btn btn-success'
                         onClick={() => this.add(index + 1)}><i className="fa fa-plus"></i>
@@ -29,7 +31,7 @@ class EmailList extends Component {
     render() {
 
         return (
-            <Grid cols='12 12 12'>
+            <Grid cols={this.props.cols}>
                 <fieldset>
                     <legend>Emails</legend>
                     <table>
