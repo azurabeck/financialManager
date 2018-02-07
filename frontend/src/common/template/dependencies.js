@@ -10,3 +10,4 @@ import 'modules/admin-lte/dist/css/skins/_all-skins.min.css'
 import 'modules/admin-lte/plugins/iCheck/flat/blue.css'
 
 import './css/content_header.css'
+import './css/content_form.css'
