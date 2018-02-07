@@ -1,0 +1,54 @@
+/*
+    THIS IS THE HEADER OF BODY CONTENT
+    THE GENERAL HEADER CORRESPOND TO SIDEBAR AND RESPONSIVIE HEADER SIDEBAR. 
+    IS CAN BE FOUND ON 'custom.css'
+
+    Responsive position of Header elements
+    Coloring Header elements
+    Changing style of Header for diferent pages
+
+    THIS CSS IS IMPORTED ON 'depencies.js'
+*/
+.col-md-2 {    
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px; 
+}
+.col-md-4 {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px; 
+}
+.col-md-6 {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px; 
+}
+.col-md-8 {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px; 
+}
+.col-md-10 {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px; 
+}
+.col-md-12 {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px; 
+}
+
+
+.default {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: rgba(225, 240, 247, 0.486);
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 17px 17px;
+}
+
