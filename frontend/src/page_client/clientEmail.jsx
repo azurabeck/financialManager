@@ -5,14 +5,20 @@ import Input from '../common/layout/input'
 
 class EmailList extends Component {
 
-    renderRows() {
+    add(index, item={}) {
+        if(!this.props.readOnly) {
+            console.log(index)
+        }
+    }
 
-        return (
-            <tr>
-                <td><Field name='newemail[0].email' component={Input}
+    renderRows() {
+        /*const list = this.props.list || []*/
+        return /*list.map((item, index) =>*/ (
+            <tr  /*key={index}*/>
+                <td><Field name='emails' component={Input}
                     placeholder='Informe o email' readOnly={this.props.readOnly} />
                 </td>
-                
+
                 <td>
                     <button type='button' className='btn btn-success'
                         onClick={() => this.add(index + 1)}><i className="fa fa-plus"></i>
@@ -25,7 +31,7 @@ class EmailList extends Component {
                 </td>
 
             </tr>
-        )
+        )/*)*/
     }
 
     render() {
@@ -38,7 +44,7 @@ class EmailList extends Component {
                         <thead>
                             <tr>
                                 <th>Email</th>
-                                <th>Ações</th>
+                                <th className='table-action'>Ações</th>
                             </tr>
                         </thead>
                         <tbody>

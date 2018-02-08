@@ -9,7 +9,7 @@ import TabsContent from '../common/tab/tabsContent'
 import TabHeaderContent from '../common/tab/tabHeaderContent'
 import TabContent from '../common/tab/tabContent'
 import { selectTab, showTabs } from '../common/tab/tabActions'
-import { create, update, remove } from './clientsActions'
+import { init, create, update, remove } from './clientsActions'
 
 import List from './clientList'
 import Form from './clientForm'

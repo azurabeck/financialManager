@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { reduxForm, Field } from 'redux-form'
+import { reduxForm, Field, formValeuSelector } from 'redux-form'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -21,7 +21,7 @@ class ClientForm extends Component {
                         label='Nome' cols='12 4' placeholder='Informe o nome' />
                     <Field name='cpf' component={LabelAndInput} type='text' readOnly={readOnly}
                         label='CPF' cols='12 4' placeholder='Informe o cpf'/>
-                    <Field name='emails' component={LabelAndInput} readOnly={readOnly}
+                    <Field name='notes' component={LabelAndInput} readOnly={readOnly}
                         label='Notas' cols='12 4' placeholder='Alguma observação sobre o cliente?' />
 
                     <EmailList cols='12 6' readOnly={readOnly}/>
