@@ -4,7 +4,7 @@ import { reset as resetForm, initialize, submit } from 'redux-form'
 import { showTabs, selectTab } from '../common/tab/tabActions'
 
 const BASE_URL = 'http://localhost:3003/api'
-const INITIAL_VALUES = {emails: [{}]}
+const INITIAL_VALUES = {}
 
 export function getList() {
     const request = axios.get(`${BASE_URL}/clientCycle`)

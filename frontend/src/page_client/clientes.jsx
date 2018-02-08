@@ -8,7 +8,6 @@ import TabsHeader from '../common/tab/tabsHeader'
 import TabsContent from '../common/tab/tabsContent'
 import TabHeaderContent from '../common/tab/tabHeaderContent'
 import TabContent from '../common/tab/tabContent'
-import { selectTab, showTabs } from '../common/tab/tabActions'
 import { init, create, update, remove } from './clientsActions'
 
 import List from './clientList'
@@ -17,8 +16,7 @@ import Form from './clientForm'
 class Clients extends Component {
 
     componentWillMount() {
-        this.props.selectTab('tabList')
-        this.props.showTabs('tabList', 'tabCreate')
+        this.props.init()
     }
 
     render() {
@@ -53,5 +51,5 @@ class Clients extends Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    selectTab, showTabs, create, update, remove}, dispatch)
+    init, create, update, remove}, dispatch)
 export default connect(null, mapDispatchToProps)(Clients)

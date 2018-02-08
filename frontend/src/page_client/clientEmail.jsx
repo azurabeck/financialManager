@@ -1,21 +1,25 @@
 import React, { Component } from 'react'
-import { Field } from 'redux-form'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { Field, arrayInsert } from 'redux-form'
 import Grid from '../common/layout/grid'
 import Input from '../common/layout/input'
+
 
 class EmailList extends Component {
 
     add(index, item={}) {
-        if(!this.props.readOnly) {
-            console.log(index)
+        if(!this.props.readOnly) {  
+            this.props.arrayInsert('clientForm', 'emails', index, item)            
         }
     }
 
     renderRows() {
-        /*const list = this.props.list || []*/
-        return /*list.map((item, index) =>*/ (
-            <tr  /*key={index}*/>
-                <td><Field name='emails' component={Input}
+        
+        const list = this.props.list || []
+        return list.map((item, index) => (
+            <tr  key={index}>
+                <td><Field name={`[${index}].emails`} component={Input}
                     placeholder='Informe o email' readOnly={this.props.readOnly} />
                 </td>
 
@@ -31,7 +35,7 @@ class EmailList extends Component {
                 </td>
 
             </tr>
-        )/*)*/
+        ))
     }
 
     render() {
@@ -56,4 +60,7 @@ class EmailList extends Component {
         )
     }
 }
-export default EmailList
+const mapDispatchToProps = dispatch => bindActionCreators({ arrayInsert },
+    dispatch)
+export default connect(null, mapDispatchToProps)(EmailList)
+    
