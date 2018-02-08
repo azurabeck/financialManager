@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import { init } from './clientsActions'
 import Grid from '../common/layout/grid'
 import LabelAndInput from '../common/layout/labelAndInput'
 import EmailList from './clientEmail'
@@ -25,10 +29,21 @@ class ClientForm extends Component {
                 <div className='box-footer'>
 
                     <button type='submit' className='btn btn-primary btn-style'>Submit</button>
+                    <button type='button' className='btn btn-default btn-style' onClick={this.props.init}>Cancelar</button>
                 </div>
             </form>
         )
     }
 }
 
-export default reduxForm({ form: 'clientForm' })(ClientForm)
+
+
+ClientForm = reduxForm({form: 'clientForm', destroyOnUnmount:
+false})(ClientForm)
+const mapDispatchToProps = dispatch => bindActionCreators({init}, dispatch)
+export default connect(null, mapDispatchToProps)(ClientForm)
+
+
+
+
+
