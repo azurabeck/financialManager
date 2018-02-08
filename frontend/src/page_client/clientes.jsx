@@ -50,6 +50,5 @@ class Clients extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-    init, create, update, remove}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({init, create, update, remove}, dispatch)
 export default connect(null, mapDispatchToProps)(Clients)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Field, arrayInsert } from 'redux-form'
+import { Field, arrayInsert, arrayRemove } from 'redux-form'
 import Grid from '../common/layout/grid'
 import Input from '../common/layout/input'
 
@@ -11,6 +11,12 @@ class EmailList extends Component {
     add(index, item={}) {
         if(!this.props.readOnly) {  
             this.props.arrayInsert('clientForm', 'emails', index, item)            
+        }
+    }
+
+    remove(index) {
+        if(!this.props.readOnly && this.props.list.length > 1) {
+            this.props.arrayRemove('clientForm', 'emails', index)
         }
     }
 
@@ -60,7 +66,7 @@ class EmailList extends Component {
         )
     }
 }
-const mapDispatchToProps = dispatch => bindActionCreators({ arrayInsert },
+const mapDispatchToProps = dispatch => bindActionCreators({ arrayInsert, arrayRemove },
     dispatch)
 export default connect(null, mapDispatchToProps)(EmailList)
     

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { FieldArray } from 'redux-form'
 import { getList, showUpdate, showDelete } from './clientsActions'
 
 class ClientList extends Component {
