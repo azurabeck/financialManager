@@ -19,7 +19,7 @@ class EmailList extends Component {
         const list = this.props.list || []
         return list.map((item, index) => (
             <tr  key={index}>
-                <td><Field name={`[${index}].emails`} component={Input}
+                <td><Field name={`emails[${index}]`} component={Input}
                     placeholder='Informe o email' readOnly={this.props.readOnly} />
                 </td>
 

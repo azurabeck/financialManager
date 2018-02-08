@@ -39,7 +39,7 @@ class ClientForm extends Component {
 ClientForm = reduxForm({
     form: 'clientForm', destroyOnUnmount: false})(ClientForm)
 const selector = formValueSelector('clientForm')
-const mapStateToProps = state => ({emails_list: selector(state, 'emails') })
+const mapStateToProps = state => ({emails: selector(state, 'emails') })
 const mapDispatchToProps = dispatch => bindActionCreators({ init }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ClientForm)
 
