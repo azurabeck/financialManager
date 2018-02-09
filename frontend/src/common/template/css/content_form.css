@@ -1,4 +1,6 @@
-/* Button from form */
+td { padding-bottom: 5px; }
+th { padding-bottom: 5px; padding-top: 25px; }
+
 .box-footer {
     margin-top: 30px;
     text-align: center;
@@ -8,23 +10,19 @@
     margin-left: 5px;
 }
 
-td {   
-    padding-bottom: 5px;
-}
-
 .td-email {
     width: 90%;
 }
+
 .td-email-action {
     text-align: center;
 }
+
 .td-email-header {
     text-align: center;
 }
 
-
 .table-action {
     width: 150px;
     padding-left: 10px;    
-    text-align: left;
 }

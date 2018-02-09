@@ -48,7 +48,6 @@ class EmailList extends Component {
         return (
             <Grid cols={this.props.cols}>
                 <fieldset>
-                    <legend>Emails</legend>
                     <table>
                         <thead>
                             <tr>
