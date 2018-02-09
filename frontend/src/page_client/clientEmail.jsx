@@ -8,9 +8,9 @@ import Input from '../common/layout/input'
 
 class EmailList extends Component {
 
-    add(index, item={}) {
+    add(index) {
         if(!this.props.readOnly) {  
-            this.props.arrayInsert('clientForm', 'emails', index, item)            
+            this.props.arrayInsert('clientForm', 'emails', index)            
         }
     }
 
@@ -25,7 +25,7 @@ class EmailList extends Component {
         const list = this.props.list || []
         return list.map((item, index) => (
             <tr key={index}>
-                <td className='td-email'><Field name={`emails[${index}]`} component={Input}
+                <td className='td-email'><Field name={`emails.${index}`} component={Input}
                     placeholder='Informe o email' readOnly={this.props.readOnly} />
                 </td>
 

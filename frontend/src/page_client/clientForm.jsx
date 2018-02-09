@@ -13,24 +13,43 @@ class ClientForm extends Component {
         return (
             <form role='form' onSubmit={handleSubmit}>
                 <div className='box-body'>
-                    <Field name='name' component={LabelAndInput}
+
+                    <Field 
+                        name='name' 
+                        component={LabelAndInput}
                         readOnly={readOnly}
-                        label='Nome' cols='12 4' placeholder='Informe o nome' />
-                    <Field name='cpf' component={LabelAndInput} type='number'
+                        label='Nome' cols='12 4' 
+                        placeholder='Informe o nome' />
+                
+                    <Field 
+                        name='cpf' 
+                        component={LabelAndInput} 
+                        type='number'
                         readOnly={readOnly}
-                        label='CPF' cols='12 4' placeholder='Informe o mês' />
-                    <Field name='notes' component={LabelAndInput} type='number'
+                        label='CPF' cols='12 4' 
+                        placeholder='Informe o mês' />
+                
+                    <Field 
+                        name='notes' 
+                        component={LabelAndInput} 
+                        type='number'
                         readOnly={readOnly}
-                        label='Notes' cols='12 4' placeholder='Informe o ano' />
+                        label='Notes' cols='12 4' 
+                        placeholder='Informe o ano' />
+                
                     <EmailList cols='12 12' list={emails} readOnly={readOnly} />
+                
                 </div>
+
                 <div className='box-footer'>
-                    <button type='submit' className={`btn btn-${
-                        this.props.submitClass}`}>
+                
+                    <button type='submit' className={`btn btn-${this.props.submitClass}`}>
                         {this.props.submitLabel}
                     </button>
-                    <button type='button' className='btn btn-default'
-                        onClick={this.props.init}>Cancelar</button>
+                
+                    <button type='button' className='btn btn-default' onClick={this.props.init}>
+                        Cancelar
+                    </button>
                 </div>
             </form>
         )
@@ -39,7 +58,7 @@ class ClientForm extends Component {
 ClientForm = reduxForm({
     form: 'clientForm', destroyOnUnmount: false})(ClientForm)
 const selector = formValueSelector('clientForm')
-const mapStateToProps = state => ({emails: selector(state, 'emails') })
+const mapStateToProps = state => ({ emails: selector(state, 'emails') })
 const mapDispatchToProps = dispatch => bindActionCreators({ init }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ClientForm)
 
