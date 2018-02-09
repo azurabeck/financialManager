@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { toastr } from 'react-redux-toastr'
-import { reset as resetForm, initialize, submit } from 'redux-form'
+import { reset as resetForm, initialize } from 'redux-form'
 import { showTabs, selectTab } from '../common/tab/tabActions'
 
 const BASE_URL = 'http://localhost:3003/api'
@@ -30,8 +30,8 @@ export function remove(values) { 
 export function showDelete(clientes) {
     return [
         showTabs('tabDelete'),
-        selectTab('tabDelete'),
-        initialize('clientForm', clientes)
+        selectTab('tabDelete')
+        //initialize('clientForm', clientes)
     ]
 }
 
@@ -39,7 +39,7 @@ export function showUpdate(clientes) {
     return [
         showTabs('tabUpdate'),
         selectTab('tabUpdate'),
-        initialize('clientForm', clientes)
+        //initialize('clientForm', clientes)
     ]
 }
 

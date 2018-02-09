@@ -8,6 +8,23 @@
     margin-left: 5px;
 }
 
+td {   
+    padding-bottom: 5px;
+}
+
+.td-email {
+    width: 90%;
+}
+.td-email-action {
+    text-align: center;
+}
+.td-email-header {
+    text-align: center;
+}
+
+
 .table-action {
     width: 150px;
+    padding-left: 10px;    
+    text-align: left;
 }

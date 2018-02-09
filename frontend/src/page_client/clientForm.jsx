@@ -22,7 +22,7 @@ class ClientForm extends Component {
                     <Field name='notes' component={LabelAndInput} type='number'
                         readOnly={readOnly}
                         label='Notes' cols='12 4' placeholder='Informe o ano' />
-                    <EmailList cols='12 6' list={emails} readOnly={readOnly} />
+                    <EmailList cols='12 12' list={emails} readOnly={readOnly} />
                 </div>
                 <div className='box-footer'>
                     <button type='submit' className={`btn btn-${

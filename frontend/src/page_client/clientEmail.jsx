@@ -24,12 +24,12 @@ class EmailList extends Component {
         
         const list = this.props.list || []
         return list.map((item, index) => (
-            <tr  key={index}>
-                <td><Field name={`emails[${index}]`} component={Input}
+            <tr key={index}>
+                <td className='td-email'><Field name={`emails[${index}]`} component={Input}
                     placeholder='Informe o email' readOnly={this.props.readOnly} />
                 </td>
 
-                <td>
+                <td className='td-email-action'>
                     <button type='button' className='btn btn-success'
                         onClick={() => this.add(index + 1)}><i className="fa fa-plus"></i>
                     </button>
@@ -39,7 +39,6 @@ class EmailList extends Component {
                         <i className="fa fa-trash-o"></i>
                     </button>
                 </td>
-
             </tr>
         ))
     }
@@ -54,7 +53,7 @@ class EmailList extends Component {
                         <thead>
                             <tr>
                                 <th>Email</th>
-                                <th className='table-action'>Ações</th>
+                                <th className='table-action td-email-action'>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
