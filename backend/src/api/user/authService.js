@@ -3,11 +3,11 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const User = require('./user')
 const env = require('../../.env')
+
 const emailRegex = /\S+@\S+\.\S+/
 const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
 
 const sendErrorsFromDB = (res, dbErrors) => {
-
     const errors = []
     _.forIn(dbErrors.errors, error => errors.push(error.message))
 
@@ -17,8 +17,8 @@ const sendErrorsFromDB = (res, dbErrors) => {
 const login = (req, res, next) => {
 
     const email = req.body.email || ''
-
     const password = req.body.password || ''
+    
     User.findOne({ email }, (err, user) => {
 
         if (err) {
