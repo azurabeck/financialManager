@@ -12,9 +12,9 @@ export default props => (
     <Router history={hashHistory}>
         <Route path='/' component={AuthOrApp}>
             <IndexRoute component={Client} />
-            <IndexRoute component={Email} />
-            <IndexRoute component={Sent} />
-            <IndexRoute component={Control} />
+            <Route path='/emails' component={Email} />
+            <Route path='/enviados' component={Sent} />
+            <Route path='/controle' component={Control} />
         </Route>    
         <Redirect from='*' to='/' />
     </Router>
