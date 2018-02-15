@@ -30,8 +30,8 @@ export function remove(values) { 
 export function showDelete(clientes) {
     return [
         showTabs('tabDelete'),
-        selectTab('tabDelete')
-        //initialize('clientForm', clientes)
+        selectTab('tabDelete'),
+        initialize('clientForm', clientes)
     ]
 }
 
@@ -40,7 +40,7 @@ export function showUpdate(clientes) {
     return [
         showTabs('tabUpdate'),
         selectTab('tabUpdate'),
-        //initialize('clientForm', clientes)
+        initialize('clientForm', clientes)
     ]
 }
 

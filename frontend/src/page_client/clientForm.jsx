@@ -37,7 +37,7 @@ class ClientForm extends Component {
                         label='Notes' cols='12 4' 
                         placeholder='Informe o ano' />
                 
-                    <EmailList cols='12 12' list={emails} readOnly={readOnly} />
+                    <EmailList field='emails' cols='12 12' list={emails} readOnly={readOnly} />
                 
                 </div>
 
