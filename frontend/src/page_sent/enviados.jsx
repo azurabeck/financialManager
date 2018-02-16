@@ -8,7 +8,7 @@ class Enviados extends Component {
     render() {
         return(
             <div>
-                <ContentHeader icon='envelope-open-o' title='Enviados' />
+                <ContentHeader icon='envelope-open-o' title='Histórico de emails enviados' />
                 <Content> Enviados content </Content>
             </div>
         )

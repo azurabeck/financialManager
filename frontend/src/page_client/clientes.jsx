@@ -23,7 +23,7 @@ class Clients extends Component {
     render() {
         return (
             <div>
-                <ContentHeader icon='user-o' title='Clientes' />
+                <ContentHeader icon='user-o' title='Lista de clientes' />
                 <Content>
                         <Tabs>
                             <TabsHeader>

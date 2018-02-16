@@ -8,7 +8,7 @@ class Emails extends Component {
     render() {
         return(
             <div>
-                <ContentHeader icon='comment-o' title='Emails' />
+                <ContentHeader icon='comment-o' title='Enviar novos emails' />
                 <Content> Emails content </Content>
             </div>
         )

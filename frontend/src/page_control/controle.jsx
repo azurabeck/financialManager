@@ -8,7 +8,7 @@ class Controle extends Component {
     render() {
         return(
             <div>
-                <ContentHeader icon='ravelry' title='Controle' />
+                <ContentHeader icon='ravelry' title='Controle de usuários' />
                 <Content> Controle content </Content>
             </div>
         )
