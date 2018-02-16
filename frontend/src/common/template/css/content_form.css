@@ -30,3 +30,9 @@ html, body {
     width: 150px;
     padding-left: 10px;    
 }
+
+.content {
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

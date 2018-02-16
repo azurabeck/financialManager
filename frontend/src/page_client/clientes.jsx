@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import Content from '../common/template/content'
+import ContentHeader from '../common/template/contentHeader'
 import Tabs from '../common/tab/tab'
 import TabsHeader from '../common/tab/tabsHeader' 
 import TabsContent from '../common/tab/tabsContent'
@@ -22,6 +23,7 @@ class Clients extends Component {
     render() {
         return (
             <div>
+                <ContentHeader icon='user-o' title='Clientes' />
                 <Content>
                         <Tabs>
                             <TabsHeader>

@@ -44,11 +44,11 @@
 .default {
     font-size: 14px;
     font-family: 'Lato', sans-serif;
-    color: rgba(225, 240, 247, 0.486);
-    text-align: right;
+    color: rgb(87, 86, 86);
+    text-align: left;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin: 0px;
-    padding: 17px 17px;
+    padding: 25px 17px;
 }
 
