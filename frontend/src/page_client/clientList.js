@@ -16,7 +16,7 @@ class ClientList extends Component {
             <tr key={cc._id}>
                 <td>{cc.name}</td>
                 <td>{cc.cpf}</td>
-                <td>{cc.emails.map(item => <tr>{item.email}</tr>)}</td>
+                <td>{cc.emails.map(item => <li key={item._id}>{item.email}</li>)}</td>
                 <td>
                     <button className='btn btn-warning' onClick={() => this.props.showUpdate(cc)}> 
                         <i className='fa fa-pencil'></i>                    

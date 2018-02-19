@@ -1,5 +1,6 @@
 td { padding-bottom: 5px; }
 th { padding-bottom: 5px; padding-top: 25px; }
+li {list-style-type: none;}
 
 html, body {
     height: 100%;
