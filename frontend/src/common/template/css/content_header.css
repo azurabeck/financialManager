@@ -52,3 +52,14 @@
     padding: 25px 17px;
 }
 
+.default-no-section {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(87, 86, 86);
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
