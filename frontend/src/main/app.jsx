@@ -7,7 +7,7 @@ import Footer from '../common/template/footer'
 import Messages from '../common/msg/messages'
 
 export default props => (
-    <div className='wrapper'>
+    <div className='wrapper background'>
         <Header />
         <SideBar />
         <div className='content-wrapper'>

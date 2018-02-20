@@ -8,15 +8,16 @@ import Line from '../common/layout/line'
 
 class Emails extends Component {
     render() {
-        return(
+        return(                            
             <div>
-                <ContentHeader icon='comment-o' title='Enviar novos emails' />
-                <Content> 
-                    <EmailList /> 
-                    <Line />
-                    <EmailForm />
-                </Content>
-            </div>
+                    <ContentHeader icon='comment-o' title='Enviar novos emails' />
+                    <Content>
+                        <EmailList />
+                        <Line />
+                        <EmailForm />                    
+                    </Content>
+
+            </div>                        
         )
     }
 }
